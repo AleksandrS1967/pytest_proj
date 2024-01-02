@@ -12,8 +12,10 @@ def coll_1():
     
 
 def test_get(coll, coll_1):
-    assert arrs.get(coll) == 2
-    assert arrs.get(coll_1) == "test"
+    data_1, data_2, data_3 = coll
+    data_4, data_5, data_6 = coll_1
+    assert arrs.get(data_1, data_2, data_3) == 2
+    assert arrs.get(data_4, data_5, data_6) == "test"
 
 
 def test_slice():
